@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Conditionnal</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div v-if="flag"> {{ message1 }} </div>
+      <div v-else> {{ message2 }} </div>
+    </div>
+    <script>
+      const app = new Vue({
+        el: '#app',
+        data: {
+          message1: 'Mon premier message !',
+          message2: "L'autre message...",
+          flag = true
+        }
+      })
+    </script>
+  </body>
+</html>
